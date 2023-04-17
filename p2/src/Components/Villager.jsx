@@ -1,25 +1,22 @@
 import React from "react";
 import Stars from "./Stars";
-import { Button } from "react-bootstrap";
 
 const Villager = ({ villager, handleAddArticle, villager_2 }) => {
   return (
     <>
       <div className="carte">
-        <h3> name : {villager_2["USen-name"]}</h3>
+        <h5>{villager.name['name-EUfr']}</h5>
 
-        <h4> price: {villager_2.price},00$</h4>
+        <h6> price: {villager['sell-price']},00$</h6>
 
-        <img src={villager.image_uri} alt="" />
+        <img src={villager.image_uri} alt="villager illustration" />
 
         <Stars note={villager_2.note} />
-        <Button
+        <button
           onClick={() => handleAddArticle(villager)}
-          size="lg"
-          variant="info"
-        >
+          className="addToCartBtn">
           Ajouter
-        </Button>
+        </button>
       </div>
     </>
   );

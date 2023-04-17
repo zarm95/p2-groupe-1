@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import Panier from "./Pages/Panier";
 import FishList from "./Pages/FishList";
 import Detail from "./Pages/Detail";
 import FossilList from "./Pages/FossilList";
@@ -27,40 +26,37 @@ function App() {
 
     setArticles([...articles, art]);
   }
+  
   return (
     <>
       <Header aticleQuatity={articles.length} setShow={setShow} show={show} />
       <Filter />
+
+
+
       <Routes>
         <Route
           path="/fossil"
           element={<FossilList handleAddArticle={handleAddArticle} />}
         />
-      </Routes>
-      <Routes>
-        <Route
-          path="/Panier"
-          element={<Panier articles={articles} setArticles={setArticles} />}
-        />
-      </Routes>
+      
 
-      <Routes>
+      
         <Route
           path="/Villager"
           element={<VillagersList handleAddArticle={handleAddArticle} />}
         />
-      </Routes>
-      <Routes>
+      
         <Route
           path="/Fish"
           element={<FishList handleAddArticle={handleAddArticle} />}
         />
-      </Routes>
-      <Routes>
+      
         <Route
           path="/Detail"
           element={<Detail handleAddArticle={handleAddArticle} />}
         />
+      
       </Routes>
       <SideBar
         show={show}
@@ -68,6 +64,8 @@ function App() {
         articles={articles}
         setArticles={setArticles}
       />
+      
+      
     </>
   );
 }

@@ -16,33 +16,50 @@ const SideBar = ({ show, setShow, articles, setArticles }) => {
   };
 
   return (
+    
+
     <Offcanvas show={show} placement="end" onHide={handleClose}>
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title>carte</Offcanvas.Title>
+        <Offcanvas.Title>Cart</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Stack>
-          <div>
-            <h1>ceci est un panier</h1>
+
+          
+          <div className="containerCart">
             {articles?.map((article) => (
               <>
-                <h1>{article.price}</h1>
-                <h2>{article["file-name"]}</h2>
+              <div className="carteInCart">
+              <div className="columnLeftCartArticle">
+                
+                <h6>{article['sell-price'] ? article['sell-price'] : article.price },00$</h6>
+               
+                <h6> {article.name['name-USen'] ? article.name['name-USen'] : article.name}</h6>
+
+              </div>
+
+                <div className="columnCenterCartArticle">
 
                 <img src={article.image_uri} alt="" />
                 <img src={article.image_url} alt="" />
 
                 <Stars note={article.note} />
+                </div>
 
-                <button key={article.cle} onClick={() => handleDelete(article)}>
-                  delete
+                <div className="columnRightCartArticle">
+                <button key={article.cle} onClick={() => handleDelete(article)} className="btnDeleteCart">
+                  Delete
                 </button>
+                </div>
+                </div>
               </>
             ))}
           </div>
+          
         </Stack>
       </Offcanvas.Body>
     </Offcanvas>
+    
   );
 };
 

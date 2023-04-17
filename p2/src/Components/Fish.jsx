@@ -1,19 +1,19 @@
 import React from "react";
 import Stars from "./Stars";
-import { Button } from "react-bootstrap";
+
 
 const Fish = ({ fish, handleAddArticle }) => {
   return (
     <>
       <div className="carte">
-        <h3>name:{fish.name}</h3>
-        <h4> price: {fish.price},00$</h4>
+        <h6>name:{fish.name}</h6>
+        <h6> price: {fish.price},00$</h6>
         <img src={fish.image_url} alt="" />
 
         <Stars note={fish.note} />
-        <Button onClick={() => handleAddArticle(fish)} size="lg" variant="info">
+        <button onClick={() => handleAddArticle(fish)} className="addToCartBtn">
           Ajouter
-        </Button>
+        </button>
       </div>
     </>
   );
