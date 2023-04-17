@@ -1,0 +1,41 @@
+.carte {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    margin: 20px;
+    background-image: url("../assets/Card.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.title-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:20px;
+}
+.stars{
+ padding :20px
+}
+.cart-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    padding: 5px;
+    
+    
+
+ 
+  
+}
+.image{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-top: 20px ;
+  width: 100px;
+  height: 100px;
+}
+ 
