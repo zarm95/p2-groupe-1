@@ -24,17 +24,18 @@ const FishList = ({ handleAddArticle }) => {
 
   return (
     <>
-      <h2>Fish List </h2>
-      {fishs.map((fish) => (
-        <>
-          <Fish
-            key={fish.name}
-            note={fish.note}
-            fish={fish}
-            handleAddArticle={handleAddArticle}
-          />
-        </>
-      ))}
+      <div className="cart-container">
+        {fishs.map((fish) => (
+          <>
+            <Fish
+              key={fish.name}
+              note={fish.note}
+              fish={fish}
+              handleAddArticle={handleAddArticle}
+            />
+          </>
+        ))}
+      </div>
     </>
   );
 };

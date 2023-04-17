@@ -13,25 +13,26 @@ const VillagersList = ({ handleAddArticle }) => {
           ...villager,
           note: Math.floor(Math.random() * 2) + 3,
           price: Math.floor(Math.random() * 100) + 200,
-        })).slice(5, 10)
+        })).slice(0, 25)
       );
     });
   }, []);
 
   return (
     <>
-      <h2>Village List </h2>
-      {villagers.map((villager) => (
-        <>
-          <Villager
-            key={villager.id}
-            note={villager.note}
-            villager={villager[0]}
-            villager_2={villager}
-            handleAddArticle={handleAddArticle}
-          />
-        </>
-      ))}
+      <div className="cart-container">
+        {villagers.map((villager) => (
+          <>
+            <Villager
+              key={villager.id}
+              note={villager.note}
+              villager={villager[0]}
+              villager_2={villager}
+              handleAddArticle={handleAddArticle}
+            />
+          </>
+        ))}
+      </div>
     </>
   );
 };
