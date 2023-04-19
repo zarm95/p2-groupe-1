@@ -7,32 +7,13 @@ const Header = ({ aticleQuatity, setShow }) => {
     setShow(true);
   };
   let navigate = useNavigate();
-  const handlePanier = () => {
-    navigate(`/Panier`);
-  };
-  const handleFish = () => {
-    navigate(`/Fish`);
-  };
+
   const handleVillagers = () => {
     navigate(`/Villager`);
   };
-  const handleFossil = () => {
-    navigate(`/Fossil`);
-  };
-  const cagnotte = 1000;
+
   return (
     <div className="Header">
-      <span>{cagnotte}$</span>
-
-      <Button
-        className="btn"
-        onClick={() => handleFish()}
-        size="lg"
-        variant="warning"
-      >
-        fish
-      </Button>
-
       <Button
         className="btn"
         onClick={() => handleVillagers()}
@@ -41,14 +22,7 @@ const Header = ({ aticleQuatity, setShow }) => {
       >
         Villagers
       </Button>
-      <Button
-        className=""
-        onClick={() => handleFossil()}
-        size="lg"
-        variant="warning"
-      >
-        fossil
-      </Button>
+
       <Button
         onClick={() => handleShow()}
         size="lg"

@@ -5,16 +5,17 @@ const Villager = ({ villager, handleAddArticle, villager_2 }) => {
   return (
     <>
       <div className="carte">
-        <h5>{villager.name['name-EUfr']}</h5>
-        <h1>Marz t'es pas en forme</h1>
-        <h6> price: {villager['sell-price']},00$</h6>
+        <h5>{villager.name["name-EUfr"]}</h5>
+
+        <h6> price: {villager["sell-price"]},00$</h6>
 
         <img src={villager.image_uri} alt="villager illustration" />
 
         <Stars note={villager_2.note} />
         <button
           onClick={() => handleAddArticle(villager)}
-          className="addToCartBtn">
+          className="addToCartBtn"
+        >
           Ajouter
         </button>
       </div>

@@ -2,3 +2,7 @@
 @import "./Filter.css";
 @import './card.css';
 @import './cart.css';
+
+body{
+    background-color: #f6EEE1;
+}

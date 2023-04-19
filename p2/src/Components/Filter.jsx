@@ -11,9 +11,8 @@ const Filter = () => {
       onChange={(event) => handleChange(event.target.value)}
     >
       <option value="">Select category </option>
-      <option value="fossil">Fossil</option>
+
       <option value="Villager">Villager</option>
-      <option value="Fish"> Fish</option>
     </select>
   );
 };

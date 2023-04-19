@@ -1,7 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import FishList from "./Pages/FishList";
-import Detail from "./Pages/Detail";
-import FossilList from "./Pages/FossilList";
 import { useState } from "react";
 import VillagersList from "./Pages/VillagersList.jsx";
 import Header from "./Components/Header";
@@ -26,37 +23,17 @@ function App() {
 
     setArticles([...articles, art]);
   }
-  
+
   return (
     <>
       <Header aticleQuatity={articles.length} setShow={setShow} show={show} />
       <Filter />
 
-
-
       <Routes>
-        <Route
-          path="/fossil"
-          element={<FossilList handleAddArticle={handleAddArticle} />}
-        />
-      
-
-      
         <Route
           path="/Villager"
           element={<VillagersList handleAddArticle={handleAddArticle} />}
         />
-      
-        <Route
-          path="/Fish"
-          element={<FishList handleAddArticle={handleAddArticle} />}
-        />
-      
-        <Route
-          path="/Detail"
-          element={<Detail handleAddArticle={handleAddArticle} />}
-        />
-      
       </Routes>
       <SideBar
         show={show}
@@ -64,8 +41,6 @@ function App() {
         articles={articles}
         setArticles={setArticles}
       />
-      
-      
     </>
   );
 }
